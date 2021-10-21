@@ -1,0 +1,123 @@
+$font-family-sans-serif                             : "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace                              : "Roboto Mono", "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-base                                     : 0.9375rem;
+$line-height-base                                   : 1.5;
+$headings-line-height                               : $line-height-base;
+
+$enable-caret                                       : false;
+
+$gray-100                                           : #f5f5f5;
+$gray-200                                           : #e5e5e5;
+$gray-300                                           : #d4d4d4;
+$gray-400                                           : #a3a3a3;
+$gray-500                                           : #848484;
+$gray-600                                           : #525252;
+$gray-700                                           : #404040;
+$gray-800                                           : #262626;
+$gray-900                                           : #171717;
+
+$body-bg                                            : #5763b014;
+$body-color                                         : $gray-900;
+
+// $primary                                            : #891a6f;
+$primary                                            : #5763B0;
+$secondary                                          : $gray-500;
+$warning                                            : #fecd2f;
+$danger                                             : #fd3258;
+$success                                            : #3dcc38;
+$info                                               : #4682B4;
+$ultralight                                         : #fbfbfb;
+$light                                              : $gray-100;
+$dark                                               : $gray-800;
+$indigo                                             : #6610f2;
+$purple                                             : #6f42c1;
+$white                                              : #ffffff;
+$blue                                               : #007bff;
+$orange                                             : #e96b02;
+$teal                                               : #20c997;
+$text-muted                                         : $gray-400;
+$primary-light                                      : #d1dde2;
+$white                                              :#ffffff;
+
+$border-radius                                      : 5px;
+$border-color                                       : $gray-300;
+$input-border-color                                 : $border-color;
+$card-border-color                                  : $border-color;
+
+$headings-line-height                               : 1.45;
+
+$btn-padding-x                                      : $px-16;
+$input-line-height                                  : 1.467;
+$input-focus-border-color                           : $primary;
+$input-btn-padding-y                                : $px-8;
+
+$custom-file-focus-box-shadow                       : none;
+
+$custom-control-indicator-focus-box-shadow          : none;
+$custom-checkbox-indicator-border-radius            : 4px;
+$custom-control-indicator-border-color              : $border-color;
+
+$table-cell-padding                                 : $px-16;
+$table-hover-bg                                     : $gray-100;
+
+$box-shadow-sm                                      : 0 1px 3px rgba($dark, 0.06);
+$box-shadow                                         : 0 .5rem 1rem rgba($gray-500, 0.125);
+$box-shadow-lg                                      : 0 1rem 3rem rgba($gray-500, 0.15);
+
+$badge-font-size                                    : 0.75rem;
+$badge-font-weight                                  : 600;
+$badge-padding-y                                    : 0.3125rem;
+
+$grid-gutter-width                                  : 24px;
+$navbar-padding-x                                   : 12px;
+
+$dropdown-item-padding-x                            : 16px;
+$dropdown-border-color                              : $border-color;
+$dropdown-divider-bg                                : $border-color;
+
+$list-group-border-color                            : $border-color;
+
+$table-hover-bg                                     : $gray-100;
+
+$alert-padding-y                                    : $px-12;
+$alert-padding-x                                    : $px-16;
+// $alert-border-level                                 : -2;
+
+$grays: () !default;
+$grays: map-merge(
+    (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+    ),
+    $grays
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+        "primary":      $primary,
+        "secondary":    $secondary,
+        "success":      $success,
+        "info":         $info,
+        "warning":      $warning,
+        "danger":       $danger,
+        "light":        $light,
+        "ultralight":   $ultralight,
+        "dark":         $dark,
+        "indigo":       $indigo,
+        "purple":       $purple,
+        "blue":         $blue,
+        "orange":       $orange,
+        "teal":         $teal,
+        "white":        $white
+    ),
+    $theme-colors
+);
