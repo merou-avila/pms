@@ -49,11 +49,11 @@ class User extends Authenticatable implements HasMedia
 
     protected $with = ['media'];
 
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection('avatars')
-            ->useFallbackUrl('https://www.gravatar.com/avatar/' . md5($this->attributes['email']));
-    }
+    // public function registerMediaCollections(): void
+    // {
+    //     $this->addMediaCollection('avatars')
+    //         ->useFallbackUrl('https://www.gravatar.com/avatar/' . md5($this->attributes['email']));
+    // }
 
     public function scopeIsActive(Builder $builder) {
         return $builder->where('is_active', 1);
