@@ -1,7 +1,5 @@
 
-> This Project is ready for Production. If you find any bug or have any suggestion please create an Issue.
-
-# Local Installation
+Installation
 
 - run `` git clone https://github.com/FahimAnzamDip/triangle-pos.git ``
 - run ``composer update `` 
