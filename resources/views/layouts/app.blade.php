@@ -1,19 +1,37 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    @include('layouts.fragments.head')
-    @yield('head-addon')
+    <meta charset="UTF-8">
+    <title>@yield('title') || {{ config('app.name') }}</title>
+    <meta content="Fahim Anzam Dip" name="author">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/favicon.png') }}">
+
+    @include('includes.main-css')
 </head>
-<body class="@yield('body-class'){{ auth()->check() ? 'logged-in' : '' }}">
 
-    @include('layouts.fragments.nav')
-    @include('layouts.navs.aside')
+<body class="c-app">
+    @include('layouts.sidebar')
 
-    <main class="py-4 px-lg-2 mx-1">
-        @yield('content')
-    </main>
+    <div class="c-wrapper">
+        <header class="c-header c-header-light c-header-fixed">
+            @include('layouts.header')
+            <div class="c-subheader justify-content-between px-3">
+                @yield('breadcrumb')
+            </div>
+        </header>
 
-    @include('layouts.fragments.scripts')
-    @yield('footer-addon')
+        <div class="c-body">
+            <main class="c-main">
+                @yield('content')
+            </main>
+        </div>
+
+        @include('layouts.footer')
+    </div>
+
+    @include('includes.main-js')
 </body>
 </html>

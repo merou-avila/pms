@@ -1,104 +1,41 @@
-// add-on variable and base
-@import '_sizes';
+// CoreUI
+@import '~@coreui/coreui/scss/coreui';
 
-// Variables
-@import '_variables';
-
-// Bootstrap
-@import '../../node_modules/bootstrap/scss/bootstrap';
-
-// components
-@import 'components/nav.scss';
-@import 'components/table.scss';
-@import 'components/aside.scss';
-
-html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+//Extra Overrides
+.btn:not([class*=ghost]):not([class*=link]):not([class*=outline]):not([class*=transparent]) {
+    border: 0;
+    box-shadow: 0 1px 1px 0 rgb(60 75 100 / 14%), 0 2px 1px -1px rgb(60 75 100 / 12%), 0 1px 3px 0 rgb(60 75 100 / 20%);
 }
 
-a, button {
-    transition-duration: 0.15s;
-    text-decoration: none!important;
+.dropzone {
+    border: 2px dashed #3B82F6;
+    border-radius: 5px;
+    background: #DBEAFE;
+}
+.dz-preview {
+    background: #EFF6FF !important;
+    border-radius: 20px;
+}
+.dz-remove {
+    color: #333;
+}
+.dropzone i.bi.bi-cloud-arrow-up {
+    font-size: 5rem;
+    color: #60A5FA;
+}
+.dropzone .dz-message {
+    color: rgba(0,0,0,.54);
+    font-weight: 500;
+    font-size: initial;
 }
 
-a:focus, button:focus, input:focus, textarea:focus, select:focus {
-    box-shadow: none!important;
-    outline: 0!important;
-    text-decoration: none!important;
+table {
+    width: 990px !important;
 }
 
-a:hover {
-  text-decoration: none!important;
-}
-
-::-moz-selection {
-    background-color: $primary;
-    color: $white;
-}
-
-::selection {
-    background-color: $primary;
-    color: $white;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.nav-link {
-    &.current {
-        position: relative;
-
-        &:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -3px;
-            left: 0;
-            height: 3px;
-            background-color: $primary;
-            border-top-left-radius: $border-radius;
-            border-top-right-radius: $border-radius;
-        }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    table {
+        width: 100% !important;
     }
-}
-
-.form-overlay {
-    z-index: 90000;
-    background-color: rgba($white, 0.8);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.form-group {
-    > label {
-        font-weight: 700;
-    }
-}
-
-@include media-breakpoint-up(sm) {
-
-}
-
-@include media-breakpoint-up(md) {
-
-}
-
-@include media-breakpoint-up(lg) {
-
-    .sidebar {
-        flex: 0 0 240px;
-    }
-
-}
-
-@include media-breakpoint-up(xl) {
-
-    .sidebar {
-        flex: 0 0 380px;
-    }
-
 }

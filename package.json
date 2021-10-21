@@ -10,26 +10,23 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@coreui/coreui": "^3.2.2",
+        "@coreui/icons": "^1.0.1",
         "axios": "^0.21",
-        "bootstrap": "^5.0.1",
-        "jquery": "^3.6",
+        "bootstrap": "^4.1.0",
+        "jquery": "^3.2",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "popper.js": "^1.16.1",
+        "popper.js": "^1.12",
         "postcss": "^8.1.14",
-        "resolve-url-loader": "^3.1.2",
-        "sass": "^1.32.11",
-        "sass-loader": "^11.0.1",
-        "vue": "^2.6.12",
-        "vue-template-compiler": "^2.6.12"
+        "resolve-url-loader": "^4.0.0",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "webpack-cli": "^4.7.2"
     },
     "dependencies": {
-        "gulp": "^4.0.2",
-        "gulp-clean-css": "^4.3.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-cssbeautify": "^3.0.0",
-        "gulp-sass": "^4.1.0",
-        "gulp-tabify": "^0.0.2",
-        "gulp-uglify": "^3.0.2"
+        "autoprefixer": "^10.3.1",
+        "datatables.net-bs4": "^3.2.2",
+        "datatables.net-buttons-bs4": "^1.7.1"
     }
 }
