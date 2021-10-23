@@ -2,8 +2,9 @@
 
 namespace Modules\Product\Entities;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 use Modules\Product\Notifications\NotifyQuantityAlert;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -17,6 +18,12 @@ class Product extends Model implements HasMedia
     protected $guarded = [];
 
     protected $with = ['media'];
+    
+    protected $dates = ['expired_at'];
+
+    public function getExpiredAttribute($value) {
+        return Carbon::parse($value)->format('d M, Y');
+    }
 
     public function category() {
         return $this->belongsTo(Category::class, 'category_id', 'id');

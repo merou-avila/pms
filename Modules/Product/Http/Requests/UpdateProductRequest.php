@@ -8,11 +8,13 @@ use Illuminate\Validation\Rule;
 
 class UpdateProductRequest extends FormRequest
 {
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
+    public function prepareForValidation()
+    {
+        $this->merge([
+            'is_prescribed' => $this->is_prescribed ? 1 : 0,
+        ]);
+    }
+
     public function rules()
     {
         return [
@@ -27,7 +29,8 @@ class UpdateProductRequest extends FormRequest
             'product_order_tax' => ['nullable', 'integer', 'min:0', 'max:100'],
             'product_tax_type' => ['nullable', 'integer'],
             'product_note' => ['nullable', 'string', 'max:1000'],
-            'category_id' => ['required', 'integer']
+            'category_id' => ['required', 'integer'],
+            'expired_at' => ['required', 'date']
         ];
     }
 

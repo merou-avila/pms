@@ -29,6 +29,15 @@ class ProductDataTable extends DataTable
             ->addColumn('product_quantity', function ($data) {
                 return $data->product_quantity . ' ' . $data->product_unit;
             })
+            ->addColumn('is_prescribed', function ($data) {
+                if ($data->is_prescribed == 1) {
+                    $html = 'Yes';
+                } else {
+                    $html = 'No';
+                }
+
+                return $html;
+            })
             ->rawColumns(['product_image']);
     }
 
@@ -86,6 +95,9 @@ class ProductDataTable extends DataTable
                 ->title('Category')
                 ->className('text-center align-middle'),
 
+            Column::computed('is_prescribed')
+                ->className('text-center align-middle'),
+
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)
@@ -96,11 +108,6 @@ class ProductDataTable extends DataTable
         ];
     }
 
-    /**
-     * Get filename for export.
-     *
-     * @return string
-     */
     protected function filename()
     {
         return 'Product_' . date('YmdHis');

@@ -28,6 +28,8 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('product_tax_type')->nullable();
             $table->text('product_note')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->restrictOnDelete();
+            $table->boolean('is_prescribed');
+            $table->date('expired_at')->nullable();
             $table->timestamps();
         });
     }
