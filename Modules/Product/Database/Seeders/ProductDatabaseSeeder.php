@@ -149,7 +149,7 @@ class ProductDatabaseSeeder extends Seeder
             [
                 'category_id' => '2',
                 'product_name' => 'Robitussin ',
-                'product_code' => 'Ae08',
+                'product_code' => 'Robi10',
                 'product_cost' => '189',
                 'product_price' => '190',
                 'product_unit' => 'Bottle',
