@@ -1,7 +1,7 @@
 
 Installation
 
-- run `` git clone https://github.com/FahimAnzamDip/triangle-pos.git ``
+- run `` git clone https://github.com/merou-avila/pms.git ``
 - run ``composer update `` 
 - run `` npm install ``
 - run ``npm run dev``
