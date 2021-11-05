@@ -168,7 +168,7 @@ class ProductDatabaseSeeder extends Seeder
             [
                 'category_id' => '2',
                 'product_name' => 'Forte Lagundi for Adult ',
-                'product_code' => 'Ae09',
+                'product_code' => 'Fort11',
                 'product_cost' => '253',
                 'product_price' => '255',
                 'product_unit' => 'Bottle',
@@ -258,7 +258,7 @@ class ProductDatabaseSeeder extends Seeder
             [
                 'category_id' => '3',
                 'product_name' => 'Strepsils',
-                'product_code' => 'Be18',
+                'product_code' => 'Stre25',
                 'product_cost' => '69.25',
                 'product_price' => '70.25',
                 'product_unit' => '1 pack',
