@@ -13,7 +13,7 @@
                     </div>
                 @endif
 
-                <div class="form-group">
+               {{--  <div class="form-group">
                     <label for="customer_id">Customer <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -28,7 +28,7 @@
                             @endforeach
                         </select>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="table-responsive">
                     <table class="table">

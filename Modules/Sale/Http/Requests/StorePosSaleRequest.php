@@ -7,15 +7,10 @@ use Illuminate\Support\Facades\Gate;
 
 class StorePosSaleRequest extends FormRequest
 {
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
-            'customer_id' => 'required|numeric',
+            'customer_id' => 'nullable|numeric',
             'tax_percentage' => 'required|integer|min:0|max:100',
             'discount_percentage' => 'required|integer|min:0|max:100',
             'shipping_amount' => 'required|numeric',

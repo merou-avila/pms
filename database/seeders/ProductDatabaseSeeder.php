@@ -229,7 +229,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Allerta Loratadine',
                 'product_code' => 'Be16',
                 'product_cost' => '20.50',
@@ -238,7 +238,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Mx3',
                 'product_code' => 'Be17',
                 'product_cost' => '18.25',
@@ -247,7 +247,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Losartan',
                 'product_code' => 'Be18',
                 'product_cost' => '15.75',
@@ -256,7 +256,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Strepsils',
                 'product_code' => 'Stre25',
                 'product_cost' => '69.25',
@@ -265,7 +265,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Aspirin',
                 'product_code' => 'Be19',
                 'product_cost' => '3.35',
@@ -274,7 +274,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Gaviscon',
                 'product_code' => 'Be20',
                 'product_cost' => '28.75',
@@ -292,7 +292,7 @@ class ProductDatabaseSeeder extends Seeder
             ],
 
             [
-                'category_id' => '3',
+                'category_id' => '2',
                 'product_name' => 'Nafatin',
                 'product_code' => 'Be22',
                 'product_cost' => '7.35',
