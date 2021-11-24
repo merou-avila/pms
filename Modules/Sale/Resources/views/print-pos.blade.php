@@ -67,7 +67,6 @@
         <p>
             Date: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}<br>
             Reference: {{ $sale->reference }}<br>
-            Name: {{ $sale->customer_name }}
         </p>
         <table class="table-data">
             <tbody>

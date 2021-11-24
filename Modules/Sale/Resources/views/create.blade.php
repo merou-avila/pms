@@ -12,14 +12,14 @@
 
 @section('content')
     <div class="container-fluid mb-4">
-        <div class="row">
-            <div class="col-12">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
                 <livewire:search-product/>
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="col-md-12">
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-md-8">
                 <div class="card">
                     <div class="card-body">
                         @include('utils.alerts')
@@ -33,7 +33,7 @@
                                         <input type="text" class="form-control" name="reference" required readonly value="SL">
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                {{-- <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
                                             <label for="customer_id">Customer <span class="text-danger">*</span></label>
@@ -44,7 +44,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
@@ -58,7 +58,7 @@
                             <livewire:product-cart :cartInstance="'sale'"/>
 
                             <div class="form-row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
@@ -68,21 +68,21 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                              {{--   <div class="col-lg-4">
                                     <div class="from-group">
-                                        <div class="form-group">
-                                            <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
-                                            <select class="form-control" name="payment_method" id="payment_method" required>
+                                        <div class="form-group"> --}}
+                                            {{-- <label for="payment_method">Payment Method <span class="text-danger">*</span></label> --}}
+                                            <select class="form-control" name="payment_method" id="payment_method" required hidden>
                                                 <option value="Cash">Cash</option>
                                                 <option value="Credit Card">Credit Card</option>
                                                 <option value="Bank Transfer">Bank Transfer</option>
                                                 <option value="Cheque">Cheque</option>
                                                 <option value="Other">Other</option>
                                             </select>
-                                        </div>
+                                      {{--   </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4">
+                                </div> --}}
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="paid_amount">Amount Received <span class="text-danger">*</span></label>
                                         <div class="input-group">

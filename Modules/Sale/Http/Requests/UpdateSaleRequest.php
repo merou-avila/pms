@@ -15,11 +15,11 @@ class UpdateSaleRequest extends FormRequest
     public function rules()
     {
         return [
-            'customer_id' => 'required|numeric',
+            // 'customer_id' => 'required|numeric',
             'reference' => 'required|string|max:255',
             'tax_percentage' => 'required|integer|min:0|max:100',
             'discount_percentage' => 'required|integer|min:0|max:100',
-            'shipping_amount' => 'required|numeric',
+            // 'shipping_amount' => 'required|numeric',
             'total_amount' => 'required|numeric',
             'paid_amount' => 'required|numeric|max:' . $this->sale->total_amount,
             'status' => 'required|string|max:255',

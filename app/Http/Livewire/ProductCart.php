@@ -48,7 +48,7 @@ class ProductCart extends Component
             }
         } else {
             $this->global_discount = 0;
-            $this->global_tax = 0;
+            $this->global_tax = 12;
             $this->shipping = 0.00;
             $this->check_quantity = [];
             $this->quantity = [];

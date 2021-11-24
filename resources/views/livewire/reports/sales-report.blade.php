@@ -23,7 +23,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-lg-4">
+                          {{--   <div class="col-lg-4">
                                 <div class="form-group">
                                     <label>Customer</label>
                                     <select wire:model.defer="customer_id" class="form-control" name="customer_id">
@@ -33,7 +33,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="form-row">
                             <div class="col-lg-6">
@@ -86,7 +86,6 @@
                         <tr>
                             <th>Date</th>
                             <th>Reference</th>
-                            <th>Customer</th>
                             <th>Status</th>
                             <th>Total</th>
                             <th>Paid</th>
@@ -99,7 +98,6 @@
                             <tr>
                                 <td>{{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}</td>
                                 <td>{{ $sale->reference }}</td>
-                                <td>{{ $sale->customer_name }}</td>
                                 <td>
                                     @if ($sale->status == 'Pending')
                                         <span class="badge badge-info">

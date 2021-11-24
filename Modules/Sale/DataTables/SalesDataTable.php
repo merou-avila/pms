@@ -21,6 +21,9 @@ class SalesDataTable extends DataTable
             ->addColumn('paid_amount', function ($data) {
                 return format_currency($data->paid_amount);
             })
+             ->addColumn('discount_amount', function ($data) {
+                return format_currency($data->discount_amount);
+            })
             ->addColumn('due_amount', function ($data) {
                 return format_currency($data->due_amount);
             })
@@ -65,10 +68,6 @@ class SalesDataTable extends DataTable
             Column::make('reference')
                 ->className('text-center align-middle'),
 
-            Column::make('customer_name')
-                ->title('Customer')
-                ->className('text-center align-middle'),
-
             Column::computed('status')
                 ->className('text-center align-middle'),
 
@@ -79,9 +78,13 @@ class SalesDataTable extends DataTable
                 ->className('text-center align-middle'),
 
             Column::computed('due_amount')
+                ->title('Change')
                 ->className('text-center align-middle'),
 
             Column::computed('payment_status')
+                ->className('text-center align-middle'),
+
+             Column::make('discount_amount')
                 ->className('text-center align-middle'),
 
             Column::computed('action')

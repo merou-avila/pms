@@ -43,8 +43,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
-                                <select class="form-control" name="payment_method" id="payment_method" required>
+                                {{-- <label for="payment_method">Payment Method <span class="text-danger">*</span></label> --}}
+                                <select class="form-control" name="payment_method" id="payment_method" required hidden>
                                     <option value="Cash">Cash</option>
                                     <option value="Credit Card">Credit Card</option>
                                     <option value="Bank Transfer">Bank Transfer</option>
@@ -76,11 +76,11 @@
                                         <th>Discount ({{ $global_discount }}%)</th>
                                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                                     </tr>
-                                    <tr>
+                                 {{--    <tr>
                                         <th>Shipping</th>
                                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                                         <td>(+) {{ format_currency($shipping) }}</td>
-                                    </tr>
+                                    </tr> --}}
                                     <tr class="text-primary">
                                         <th>Grand Total</th>
                                         @php

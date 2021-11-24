@@ -41,7 +41,7 @@ class SalePaymentsController extends Controller
             'amount' => 'required|numeric',
             'note' => 'nullable|string|max:1000',
             'sale_id' => 'required',
-            'payment_method' => 'required|string|max:255'
+            // 'payment_method' => 'required|string|max:255'
         ]);
 
         DB::transaction(function () use ($request) {

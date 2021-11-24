@@ -23,12 +23,12 @@
                 <i class="bi bi-pencil mr-2 text-primary" style="line-height: 1;"></i> Edit
             </a>
         @endcan
-        @can('show_sales')
+       {{--  @can('show_sales')
             <a href="{{ route('sales.show', $data->id) }}" class="dropdown-item">
                 <i class="bi bi-eye mr-2 text-info" style="line-height: 1;"></i> Details
             </a>
-        @endcan
-        @can('delete_sales')
+        @endcan --}}
+       {{--  @can('delete_sales')
             <button id="delete" class="dropdown-item" onclick="
                 event.preventDefault();
                 if (confirm('Are you sure? It will delete the data permanently!')) {
@@ -40,6 +40,6 @@
                     @method('delete')
                 </form>
             </button>
-        @endcan
+        @endcan --}}
     </div>
 </div>

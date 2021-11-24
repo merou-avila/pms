@@ -156,7 +156,7 @@
     </li>
 @endcan
 
-@can('access_sale_returns')
+{{-- @can('access_sale_returns')
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown {{ request()->routeIs('sale-returns.*') || request()->routeIs('sale-return-payments.*') ? 'c-show' : '' }}">
         <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <i class="c-sidebar-nav-icon bi bi-arrow-return-left" style="line-height: 1;"></i> Sale Returns
@@ -178,7 +178,7 @@
             </li>
         </ul>
     </li>
-@endcan
+@endcan --}}
 
 @can('access_expenses')
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown {{ request()->routeIs('expenses.*') || request()->routeIs('expense-categories.*') ? 'c-show' : '' }}">
@@ -212,20 +212,20 @@
 @can('access_customers|access_suppliers')
     <li class="c-sidebar-nav-item c-sidebar-nav-dropdown {{ request()->routeIs('customers.*') || request()->routeIs('suppliers.*') ? 'c-show' : '' }}">
         <a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
-            <i class="c-sidebar-nav-icon bi bi-people" style="line-height: 1;"></i> People
+            <i class="c-sidebar-nav-icon bi bi-people" style="line-height: 1;"></i> Suppliers
         </a>
         <ul class="c-sidebar-nav-dropdown-items">
-            @can('access_customers')
+           {{--  @can('access_customers')
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->routeIs('customers.*') ? 'c-active' : '' }}" href="{{ route('customers.index') }}">
                         <i class="c-sidebar-nav-icon bi bi-people-fill" style="line-height: 1;"></i> Customers
                     </a>
                 </li>
-            @endcan
+            @endcan --}}
             @can('access_suppliers')
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->routeIs('suppliers.*') ? 'c-active' : '' }}" href="{{ route('suppliers.index') }}">
-                        <i class="c-sidebar-nav-icon bi bi-people-fill" style="line-height: 1;"></i> Suppliers
+                        <i class="c-sidebar-nav-icon bi bi-people-fill" style="line-height: 1;"></i> Supplier List
                     </a>
                 </li>
             @endcan
@@ -259,11 +259,11 @@
                     <i class="c-sidebar-nav-icon bi bi-clipboard-data" style="line-height: 1;"></i> Purchases Report
                 </a>
             </li>
-            <li class="c-sidebar-nav-item">
+          {{--   <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link {{ request()->routeIs('sales-return-report.index') ? 'c-active' : '' }}" href="{{ route('sales-return-report.index') }}">
                     <i class="c-sidebar-nav-icon bi bi-clipboard-data" style="line-height: 1;"></i> Sales Return Report
                 </a>
-            </li>
+            </li> --}}
             <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link {{ request()->routeIs('purchases-return-report.index') ? 'c-active' : '' }}" href="{{ route('purchases-return-report.index') }}">
                     <i class="c-sidebar-nav-icon bi bi-clipboard-data" style="line-height: 1;"></i> Purchases Return Report

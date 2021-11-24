@@ -60,7 +60,8 @@ class SalePaymentsDataTable extends DataTable
                 ->className('align-middle text-center'),
 
             Column::make('payment_method')
-                ->className('align-middle text-center'),
+                ->className('align-middle text-center')
+                ->visible(false),
 
             Column::computed('action')
                 ->exportable(false)

@@ -16,13 +16,13 @@ class SettingDatabaseSeeder extends Seeder
     public function run()
     {
         Setting::create([
-            'company_name' => 'PMS',
-            'company_email' => 'pms@test.com',
+            'company_name' => 'KMA',
+            'company_email' => 'kma@test.com',
             'company_phone' => '09108876543',
             'notification_email' => 'notification@test.com',
             'default_currency_id' => 1,
             'default_currency_position' => 'prefix',
-            'footer_text' => 'PMS © 2021',
+            'footer_text' => 'KMA © 2021',
             'company_address' => 'Bansalan Davao del Sur'
         ]);
     }
