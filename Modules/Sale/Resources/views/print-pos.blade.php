@@ -82,8 +82,8 @@
 
             @if($sale->tax_percentage)
                 <tr>
-                    <th colspan="2" style="text-align:left">Tax ({{ $sale->tax_percentage }}%)</th>
-                    <th style="text-align:right">{{ format_currency($sale->tax_amount) }}</th>
+                    <th colspan="2" style="text-align:left">Tax (12%)</th>
+                    <th style="text-align:right">{{ format_currency($sale->total_amount * .12) }}</th>
                 </tr>
             @endif
             @if($sale->discount_percentage)
