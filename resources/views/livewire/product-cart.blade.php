@@ -88,9 +88,12 @@
         <div class="col-md-4">
             <div class="table-responsive">
                 <table class="table table-striped">
+                    @php
+                        $total_with_shipping = Cart::instance($cart_instance)->total() + (float) $shipping
+                    @endphp
                     <tr>
-                        <th>Order Tax ({{ $global_tax }}%)</th>
-                        <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
+                        <th>Order Tax (12%)</th>
+                        <td>{{ format_currency($total_with_shipping * .12) }}</td>
                     </tr>
                     <tr>
                         <th>Discount ({{ $global_discount }}%)</th>
@@ -118,13 +121,13 @@
     <input type="hidden" name="total_amount" value="{{ $total_with_shipping }}">
 
     <div class="form-row">
-        <div class="col-lg-6">
+        {{-- <div class="col-lg-6">
             <div class="form-group">
                 <label for="tax_percentage">Order Tax (%)</label>
                 <input wire:model.lazy="global_tax" type="number" class="form-control" name="tax_percentage" min="0" max="100" value="{{ $global_tax }}" required>
             </div>
-        </div>
-        <div class="col-lg-6">
+        </div> --}}
+        <div class="col-lg-4">
             <div class="form-group">
                 <label for="discount_percentage">Discount (%)</label>
                 <input wire:model.lazy="global_discount" type="number" class="form-control" name="discount_percentage" min="0" max="100" value="{{ $global_discount }}" required>

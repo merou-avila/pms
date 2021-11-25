@@ -43,7 +43,7 @@ class PosController extends Controller
             $sale = Sale::create([
                 'date' => now()->format('Y-m-d'),
                 'reference' => 'PSL',
-                'tax_percentage' => $request->tax_percentage,
+                'tax_percentage' => 12,
                 'discount_percentage' => $request->discount_percentage,
                 'shipping_amount' => $request->shipping_amount * 100,
                 'paid_amount' => $request->paid_amount * 100,

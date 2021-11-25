@@ -68,9 +68,12 @@
                                                 </span>
                                         </td>
                                     </tr>
+                                    @php
+                                        $total_with_shipping = Cart::instance($cart_instance)->total() + (float) $shipping
+                                    @endphp
                                     <tr>
-                                        <th>Order Tax ({{ $global_tax }}%)</th>
-                                        <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
+                                        <th>Order Tax (12%)</th>
+                                        <td>{{ format_currency($total_with_shipping*.12) }}</td>
                                     </tr>
                                     <tr>
                                         <th>Discount ({{ $global_discount }}%)</th>
