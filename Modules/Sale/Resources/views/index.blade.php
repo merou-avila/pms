@@ -19,11 +19,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('sales.create') }}" class="btn btn-primary">
+                        {{-- <a href="{{ route('sales.create') }}" class="btn btn-primary">
                             Add Sale <i class="bi bi-plus"></i>
                         </a>
-
-                        <hr>
+ --}}
+                        {{-- <hr> --}}
 
                         <div class="table-responsive">
                             {!! $dataTable->table() !!}
