@@ -35,7 +35,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         $pdf = \PDF::loadView('sale::print-pos', [
             'sale' => $sale,
-        ])->setPaper('a7')
+        ])->setPaper('a6')
             ->setOption('margin-top', 8)
             ->setOption('margin-bottom', 8)
             ->setOption('margin-left', 5)

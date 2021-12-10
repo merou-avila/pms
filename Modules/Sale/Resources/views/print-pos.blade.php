@@ -80,39 +80,45 @@
                 </tr>
             @endforeach
 
-            @if($sale->tax_percentage)
-                <tr>
-                    <th colspan="2" style="text-align:left">Tax (12%)</th>
-                    <th style="text-align:right">{{ format_currency($sale->total_amount * .12) }}</th>
-                </tr>
-            @endif
             @if($sale->discount_percentage)
                 <tr>
                     <th colspan="2" style="text-align:left">Discount ({{ $sale->discount_percentage }}%)</th>
                     <th style="text-align:right">{{ format_currency($sale->discount_amount) }}</th>
                 </tr>
             @endif
-            @if($sale->shipping_amount)
+           {{--  @if($sale->shipping_amount)
                 <tr>
                     <th colspan="2" style="text-align:left">Shipping</th>
                     <th style="text-align:right">{{ format_currency($sale->shipping_amount) }}</th>
                 </tr>
-            @endif
+            @endif --}}
             <tr>
-                <th colspan="2" style="text-align:left">Grand Total</th>
-                <th style="text-align:right">{{ format_currency($sale->total_amount) }}</th>
+                <th colspan="2" style="text-align:left">Cash</th>
+                <th style="text-align:right">{{ format_currency($sale->paid_amount) }}</th>
+            </tr>
+             <tr>
+                <th colspan="2" style="text-align:left">Change</th>
+                <th style="text-align:right">{{ format_currency($sale->due_amount) }}</th>
+            </tr>
+            <tr style="background-color:#ddd;">
+                <th colspan="2" style="text-align:left">
+                    <strong>Grand Total</strong>
+                </th>
+                <th style="text-align:right;">
+                    {{ format_currency($sale->total_amount) }}
+                </th>
             </tr>
             </tbody>
         </table>
-        <table>
+      {{--   <table>
             <tbody>
                 <tr style="background-color:#ddd;">
-                    <td class="centered" style="padding: 5px;">
-                        Paid By: {{ $sale->payment_method }}
+                    <td>
+                        <strong>Grand Total</strong>
                     </td>
-                    <td class="centered" style="padding: 5px;">
-                        Amount: {{ format_currency($sale->paid_amount) }}
-                    </td>
+                    <th style="text-align:right;">
+                        {{ format_currency($sale->total_amount) }}
+                    </th>
                 </tr>
                 <tr style="border-bottom: 0;">
                     <td class="centered" colspan="3">
@@ -122,9 +128,40 @@
                     </td>
                 </tr>
             </tbody>
+        </table> --}}
+        <br>
+        <br>
+        <table>
+            <tbody>
+                <tr>
+                    <th colspan="2" style="text-align:left">VAT Sale</th>
+                    <th style="text-align:right">{{ format_currency($sale->total_amount - $sale->total_amount * .12) }}</th>
+                </tr>
+                <tr>
+                    <th colspan="2" style="text-align:left">VAT Exempt Sales</th>
+                    <th style="text-align:right">{{ format_currency(0) }}</th>
+                </tr>
+                @if($sale->tax_percentage)
+                    <tr>
+                        <th colspan="2" style="text-align:left">12% VAT</th>
+                        <th style="text-align:right">{{ format_currency($sale->total_amount * .12) }}</th>
+                    </tr>
+                @endif
+            </tbody>
         </table>
     </div>
 </div>
-
+<br>
+<div style="text-align:justify;">
+    THIS SERVES AS YOUR SALES INVOICE. THIS INVOICE SHALL BE VALID FOR FIVE(5) YEARS FROM THE DATE OF THE PERMIT TO USE.
+</div>
+<br>
+<div style="text-align:center;">
+    ******RETURN POLICY******
+</div>
+<br>
+<div style="text-align:justify">
+    WE WILL ACCEPT, FOR RETURN OR EXCHANGE, ITEMS PURCHASED WITHIN 90 DAYS THAT ARE IN ITS ORIGINAL CONDITION AND PACKAGING, AND WITH ORIGINAL SALES INVOICE. SPECIAL ORDERS AND ITEMS ALTERED UPON PURCHASE ARE NOT ELIGIBLE FOR RETURN.
+</div>
 </body>
 </html>
