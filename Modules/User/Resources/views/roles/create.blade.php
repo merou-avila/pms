@@ -324,7 +324,7 @@
                                 </div> --}}
 
                                 <!-- Expenses Permission -->
-                                <div class="col-lg-4 col-md-6 mb-3">
+                                {{-- <div class="col-lg-4 col-md-6 mb-3">
                                     <div class="card h-100 border-0 shadow">
                                         <div class="card-header">
                                             Expenses
@@ -374,7 +374,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <!-- Customers Permission -->
                               {{--   <div class="col-lg-4 col-md-6 mb-3">
