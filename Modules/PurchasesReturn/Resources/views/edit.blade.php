@@ -62,9 +62,8 @@
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
-                                            <option {{ $purchase_return->status == 'Pending' ? 'selected' : '' }} value="Pending">Pending</option>
-                                            <option {{ $purchase_return->status == 'Shipped' ? 'selected' : '' }} value="Shipped">Shipped</option>
-                                            <option {{ $purchase_return->status == 'Completed' ? 'selected' : '' }} value="Completed">Completed</option>
+                                           {{--  <option {{ $purchase_return->status == 'Pending' ? 'selected' : '' }} value="Pending">Pending</option> --}}
+                                            <option {{ $purchase_return->status == 'Returned' ? 'selected' : '' }} value="Returned">Returned</option>
                                         </select>
                                     </div>
                                 </div>

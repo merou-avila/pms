@@ -35,8 +35,9 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="supplier_id">Supplier <span class="text-danger">*</span></label>
-                                            <select class="form-control" name="supplier_id" id="supplier_id" required>
+                                            <label for="supplier_id">Supplier</label>
+                                            <select class="form-control" name="supplier_id" id="supplier_id">
+                                                <option value=""></option>
                                                 @foreach(\Modules\People\Entities\Supplier::all() as $supplier)
                                                     <option value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
                                                 @endforeach
@@ -61,9 +62,8 @@
                                     <div class="form-group">
                                         <label for="status">Status <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
-                                            <option value="Pending">Pending</option>
-                                            <option value="Shipped">Shipped</option>
-                                            <option value="Completed">Completed</option>
+                                           {{--  <option value="Pending">Pending</option> --}}
+                                            <option value="Returned">Returned</option>
                                         </select>
                                     </div>
                                 </div>
@@ -73,10 +73,10 @@
                                             <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                 <option value="Cash">Cash</option>
-                                                <option value="Credit Card">Credit Card</option>
+                                             {{--    <option value="Credit Card">Credit Card</option>
                                                 <option value="Bank Transfer">Bank Transfer</option>
                                                 <option value="Cheque">Cheque</option>
-                                                <option value="Other">Other</option>
+                                                <option value="Other">Other</option> --}}
                                             </select>
                                         </div>
                                     </div>
